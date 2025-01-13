@@ -7,6 +7,7 @@ services:
       - 8888:8888
     volumes:
       - ./logs:/app/logs
+      - /home/jiag/.sdkman/candidates/gradle/current/bin/gradle:/root/.gradle
 
   elastic:
     image: docker.elastic.co/elasticsearch/elasticsearch:8.17.0

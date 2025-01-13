@@ -31,7 +31,7 @@ services:
     volumes:
       - ./elk/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
     environment:
-      - ELASTIC_USER=rootuser
+      - ELASTIC_USER=elastic
       - ELASTIC_PASSWORD=rootuser
       - ELASTIC_HOSTS=http://elastic:9200
     depends_on:

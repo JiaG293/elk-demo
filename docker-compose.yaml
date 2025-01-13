@@ -14,8 +14,8 @@ services:
   elastic:
     image: docker.elastic.co/elasticsearch/elasticsearch:8.17.0
     environment:
-      - ELASTIC_PASSWORD=root
-      - KIBANA_PASSWORD=root
+      - ELASTIC_PASSWORD=rootuser
+      - KIBANA_PASSWORD=rootuser
       - discovery.type=single-node
       - xpack.security.http.ssl.enabled=false
       - cluster.routing.allocation.disk.threshold_enabled=false
@@ -29,8 +29,8 @@ services:
     volumes:
       - ./elk/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
     environment:
-      - ELASTIC_USER=root
-      - ELASTIC_PASSWORD=root
+      - ELASTIC_USER=rootuser
+      - ELASTIC_PASSWORD=rootuser
       - ELASTIC_HOSTS=http://elastic:9200
     depends_on:
       - elastic
@@ -42,8 +42,8 @@ services:
     environment:
       SERVER_NAME: kibana
       ELASTICSEARCH_HOSTS: '["http://elastic:9200"]'
-      ELASTICSEARCH_USERNAME: root
-      ELASTICSEARCH_PASSWORD: root
+      ELASTICSEARCH_USERNAME: rootuser
+      ELASTICSEARCH_PASSWORD: rootuser
     ports:
       - "5601:5601"
     depends_on:

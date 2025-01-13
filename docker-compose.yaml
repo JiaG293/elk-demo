@@ -5,6 +5,10 @@ services:
       dockerfile: Dockerfile
     ports:
       - 8888:8888
+      - 9200:9200
+      - 9300:9300
+      - 5601:5601
+      - 5044:5044
     volumes:
       - ./logs:/app/logs
       - /home/jiag/.sdkman/candidates/gradle/current/bin/gradle:/root/.gradle

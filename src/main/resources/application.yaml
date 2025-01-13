@@ -1,2 +1,11 @@
 spring.application.name: elk-demo
 server.port: 8888
+
+
+
+logging:
+  level:
+    root: INFO
+    com.jiag.elkdemo: DEBUG
+  file:
+    name: logs/application.log

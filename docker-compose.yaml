@@ -22,7 +22,7 @@ services:
       - xpack.security.http.ssl.enabled=false
       - cluster.routing.allocation.disk.threshold_enabled=false
       - http.cors.enabled=false
-      - http.cors.allow-origin="*"
+      #- http.cors.allow-origin="*"
     volumes:
       - ./elk/data:/usr/share/elasticsearch/data
     networks:

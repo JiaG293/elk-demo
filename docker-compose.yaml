@@ -42,7 +42,7 @@ services:
     environment:
       SERVER_NAME: kibana
       ELASTICSEARCH_HOSTS: '["http://elastic:9200"]'
-      ELASTICSEARCH_USERNAME: rootuser
+      ELASTICSEARCH_USERNAME: kibana_system
       ELASTICSEARCH_PASSWORD: rootuser
     ports:
       - "5601:5601"
